@@ -24,9 +24,8 @@ const Index = ({ foods }: Props) => {
         justifyContent="center"
         alignItems="center"
         flexWrap="wrap"
-        w={{ base: '95%', lg: '960px' }}
+        w={{ base: '95%', xl: '1216px' }}
         m="auto"
-        transition="all 0.5s ease-in-out"
       >
         {foods.map((food) => (
           <FoodPreview

@@ -9,7 +9,7 @@ type Props = {
 const FoodPreview = ({ title, coverImage, excerpt }: Props) => {
   return (
     <Box
-      w="400px"
+      w="350px"
       borderWidth="1px"
       borderRadius="lg"
       overflow="hidden"
@@ -17,7 +17,6 @@ const FoodPreview = ({ title, coverImage, excerpt }: Props) => {
       _hover={{
         boxShadow: '0 2px 4px -1px #0003, 0 4px 5px 0 #00000024, 0 1px 10px 0 #0000001f',
       }}
-      transition="all 0.5s ease-in-out"
     >
       <AspectRatio ratio={4 / 3} w="100%">
         <Img src={coverImage} alt={title} w="100%" />
