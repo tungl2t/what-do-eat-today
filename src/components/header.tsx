@@ -1,6 +1,8 @@
 import { Box, Button, Flex, Heading } from '@chakra-ui/react';
-
-const Header = () => {
+type Props = {
+  onClick: () => void;
+};
+const Header = ({ onClick }: Props) => {
   return (
     <header>
       <Box
@@ -26,7 +28,7 @@ const Header = () => {
           px={{ base: '10px', '2md': 0 }}
         >
           <Heading fontSize="1.15em">Hôm nay ăn gì?</Heading>
-          <Button colorScheme="gray.600" variant="outline" fontSize="0.95em">
+          <Button colorScheme="gray.600" variant="outline" fontSize="0.95em" onClick={onClick}>
             Click ở đây để chọn
           </Button>
         </Flex>
