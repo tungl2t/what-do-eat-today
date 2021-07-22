@@ -1,19 +1,17 @@
 import {
   AspectRatio,
   Box,
-  Button,
   Flex,
   Img,
   Modal,
   ModalBody,
   ModalCloseButton,
   ModalContent,
-  ModalFooter,
   ModalHeader,
   ModalOverlay,
   useDisclosure,
 } from '@chakra-ui/react';
-import { useEffect, useState } from 'react';
+import { useRef, useState } from 'react';
 
 import { getAllFoods } from '@/lib/api';
 import { FoodInterface } from '@/types/food.interface';
@@ -68,7 +66,7 @@ const Index = ({ foods }: Props) => {
       <Modal isOpen={isOpen} onClose={onClose} isCentered>
         <ModalOverlay />
         <ModalContent w={{ base: '95%', sm: '608px' }} maxH="90vh">
-          <ModalCloseButton color="gray.300" w={4} h={4} />
+          <ModalCloseButton color="gray.300" w={6} h={6} />
           <ModalHeader mt={2} textAlign="center">
             <Box>Món ăn hôm nay: {todayFood?.title}</Box>
           </ModalHeader>
