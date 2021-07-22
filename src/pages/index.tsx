@@ -65,16 +65,18 @@ const Index = ({ foods }: Props) => {
         ))}
       </Flex>
 
-      <Modal isOpen={isOpen} onClose={onClose} blockScrollOnMount={false} isCentered>
+      <Modal isOpen={isOpen} onClose={onClose} isCentered>
         <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Món ăn hôm nay: {todayFood?.title}</ModalHeader>
-          <ModalCloseButton />
+        <ModalContent w={{ base: '95%', sm: '608px' }} maxH="90vh">
+          <ModalCloseButton color="gray.300" w={4} h={4} />
+          <ModalHeader mt={2} textAlign="center">
+            <Box>Món ăn hôm nay: {todayFood?.title}</Box>
+          </ModalHeader>
           <ModalBody>
             <AspectRatio ratio={4 / 3} w="100%">
               <Img src={todayFood?.coverImage} alt={todayFood?.title} w="100%" />
             </AspectRatio>
-            <Box p={6}>
+            <Box maxH="30vh" overflowY="auto" my={3}>
               <Box d="flex" alignItems="baseline">
                 <Box letterSpacing="wide">{todayFood?.excerpt}</Box>
               </Box>
